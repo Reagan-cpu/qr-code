@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worldwide Sea Onshore Technical Service Pvt. Ltd.</title>
+    <meta name="description" content="Worldwide Sea Onshore Technical Service Pvt. Ltd. - Business Card">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+        *{margin:0;padding:0;box-sizing:border-box}
+        html,body{width:100%;height:100%;overflow-x:hidden}
+        body{display:flex;justify-content:center;align-items:center;min-height:100vh;background:#fff;font-family:'Roboto',sans-serif}
+        .card-container{width:100%;min-height:100vh;background:#fff;padding:50px 70px;display:flex;flex-direction:column;justify-content:space-between}
+        .top-section{display:flex;justify-content:space-between;align-items:flex-start}
+        .logo-section{display:flex;flex-direction:column;align-items:center}
+        .globe-logo{width:110px;height:90px;object-fit:contain;cursor:pointer;transition:transform .3s ease}
+        .globe-logo:hover{transform:scale(1.08)}
+        .logo-text{font-family:'Roboto',sans-serif;font-weight:900;font-size:18px;color:#1a3a5c;margin-top:6px;letter-spacing:3px}
+        .contact-section{text-align:right}
+        .person-name{font-family:'Merriweather',serif;font-size:36px;font-weight:900;color:#1a2a3a;margin-bottom:10px}
+        .phone-line{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-bottom:5px;font-size:22px;font-weight:700;color:#8b1a1a;cursor:pointer;transition:color .2s ease;text-decoration:none}
+        .phone-line:hover{color:#c0392b}
+        .phone-icon{width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center}
+        .phone-icon svg{width:18px;height:18px;fill:#8b1a1a;transition:fill .2s ease}
+        .phone-line:hover .phone-icon svg{fill:#c0392b}
+        .middle-section{text-align:center;padding:40px 0 30px;flex-grow:1;display:flex;flex-direction:column;justify-content:center}
+        .company-name-main{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;font-style:italic;color:#1a2a3a;letter-spacing:8px;text-transform:uppercase;margin-bottom:12px}
+        .company-name-sub{font-family:'Roboto',sans-serif;font-size:34px;font-weight:700;color:#8b1a1a;letter-spacing:5px;text-transform:uppercase}
+        .divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,#ccc,transparent);margin:10px 0 30px}
+        .bottom-section{display:flex;flex-direction:column;gap:24px}
+        .address-line{display:flex;align-items:flex-start;gap:12px;font-size:22px;font-weight:700;color:#1a2a3a;line-height:1.6;cursor:default;transition:transform .2s ease}
+        .address-line:hover{transform:translateX(5px)}
+        .address-line .pin-icon{flex-shrink:0;margin-top:3px}
+        .email-line{display:flex;align-items:center;gap:12px;font-size:26px;font-weight:900;color:#1a2a3a;flex-wrap:wrap}
+        .email-icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+        .email-icon svg{width:26px;height:26px;fill:#1a2a3a}
+        .email-link{color:#1a2a3a;text-decoration:none;transition:color .2s ease;cursor:pointer}
+        .email-link:hover{color:#8b1a1a;text-decoration:underline}
+        .email-separator{color:#1a2a3a;font-weight:400;margin:0 5px}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        .top-section{animation:fadeInUp .6s ease-out .1s both}
+        .middle-section{animation:fadeInUp .6s ease-out .2s both}
+        .bottom-section{animation:fadeInUp .6s ease-out .3s both}
+
+        @media(max-width:1024px){
+            .card-container{padding:40px 45px}
+            .company-name-main{font-size:42px;letter-spacing:5px}
+            .company-name-sub{font-size:28px;letter-spacing:3px}
+            .person-name{font-size:30px}
+            .phone-line{font-size:19px}
+            .address-line{font-size:19px}
+            .email-line{font-size:22px}
+        }
+        @media(max-width:768px){
+            .card-container{padding:30px 28px}
+            .top-section{flex-direction:column;align-items:center;gap:25px}
+            .contact-section{text-align:center}
+            .phone-line{justify-content:center;font-size:17px}
+            .person-name{font-size:26px}
+            .globe-logo{width:90px;height:90px}
+            .company-name-main{font-size:28px;letter-spacing:3px}
+            .company-name-sub{font-size:22px;letter-spacing:2px}
+            .address-line{font-size:16px}
+            .email-line{font-size:18px;flex-direction:column;align-items:flex-start;gap:6px}
+            .email-separator{display:none}
+        }
+        @media(max-width:480px){
+            .card-container{padding:22px 18px}
+            .globe-logo{width:75px;height:75px}
+            .logo-text{font-size:14px}
+            .person-name{font-size:22px}
+            .phone-line{font-size:15px}
+            .company-name-main{font-size:22px;letter-spacing:2px}
+            .company-name-sub{font-size:17px;letter-spacing:1px}
+            .address-line{font-size:14px}
+            .email-line{font-size:15px}
+        }
+        @media(max-width:360px){
+            .card-container{padding:18px 14px}
+            .company-name-main{font-size:18px;letter-spacing:1px}
+            .company-name-sub{font-size:14px}
+            .person-name{font-size:20px}
+            .phone-line{font-size:13px}
+            .email-line{font-size:13px}
+            .address-line{font-size:13px}
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container" id="business-card">
+        <div class="top-section">
+            <div class="logo-section">
+                <img class="globe-logo" src="Screenshot 2026-08-01 183008.png" alt="WSOTS Globe Logo">
+                <div class="logo-text">WSOTS</div>
+            </div>
+            <div class="contact-section">
+                <div class="person-name">Rajiv Ranjan</div>
+                <a href="tel:+918169749708" class="phone-line" id="phone-1">
+                    <span class="phone-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
+                    +91 81697 49708
+                </a>
+                <a href="tel:+919004458017" class="phone-line" id="phone-2">
+                    <span class="phone-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
+                    +91 90044 58017
+                </a>
+                <a href="tel:+919167736961" class="phone-line" id="phone-3">
+                    <span class="phone-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
+                    +91 91677 36961
+                </a>
+            </div>
+        </div>
+        <div class="middle-section">
+            <div class="company-name-main">Worldwide Sea Onshore</div>
+            <div class="company-name-sub">Technical Service Pvt. Ltd.</div>
+        </div>
+        <div class="divider"></div>
+        <div class="bottom-section">
+            <div class="address-line" id="address">
+                <span class="pin-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#c0392b"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span>
+                <span>Office No. A5, Moreshwar Apartment, Plot No. A-35, Near Nerul Railway Station, Sector - 20, Nerul (W), Navi Mumbai, Maharashtra - 400706.</span>
+            </div>
+            <div class="email-line" id="email-section">
+                <span class="email-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
+                <a href="mailto:rajivranjan121284@gmail.com" class="email-link" id="email-1">rajivranjan121284@gmail.com</a>
+                <span class="email-separator">|</span>
+                <a href="mailto:wsots2021@gmail.com" class="email-link" id="email-2">wsots2021@gmail.com</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.phone-line').forEach(p=>{p.addEventListener('click',function(e){e.preventDefault();navigator.clipboard.writeText(this.textContent.trim()).then(()=>showTooltip(this,'Copied!')).catch(()=>{window.location.href=this.href})})});
+        document.querySelectorAll('.email-link').forEach(e=>{e.addEventListener('click',function(ev){ev.preventDefault();navigator.clipboard.writeText(this.textContent.trim()).then(()=>showTooltip(this,'Copied!')).catch(()=>{window.location.href=this.href})})});
+        document.getElementById('address').addEventListener('click',function(){navigator.clipboard.writeText(this.querySelector('span:last-child').textContent.trim()).then(()=>showTooltip(this,'Address copied!'))});
+        function showTooltip(el,msg){const t=document.createElement('div');t.textContent=msg;t.style.cssText='position:fixed;background:#1a2a3a;color:#fff;padding:8px 16px;border-radius:6px;font-size:14px;font-weight:500;z-index:1000;pointer-events:none;animation:tooltipFade 1.5s ease-out forwards;box-shadow:0 4px 12px rgba(0,0,0,.2)';const r=el.getBoundingClientRect();t.style.left=r.left+r.width/2-40+'px';t.style.top=r.top-40+'px';document.body.appendChild(t);if(!document.getElementById('ts')){const s=document.createElement('style');s.id='ts';s.textContent='@keyframes tooltipFade{0%{opacity:0;transform:translateY(10px)}20%{opacity:1;transform:translateY(0)}80%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-10px)}}';document.head.appendChild(s)}setTimeout(()=>t.remove(),1500)}
+    </script>
+</body>
+</html>
