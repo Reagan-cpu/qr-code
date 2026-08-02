@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>WSOTS - Home | Worldwide Sea Onshore Technical Service Pvt. Ltd.</title>
+    <title>WSOTS - Why Choose Us | Worldwide Sea Onshore Technical Service Pvt. Ltd.</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Industrial Mechanical Engineering & Ship Repair Specialists.">
@@ -58,10 +58,11 @@
         .nav-text { display: flex; flex-direction: column; }
         .nav-text-main { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; color: var(--primary); font-style: italic; letter-spacing: 2px; }
         .nav-text-sub { font-size: 12px; font-weight: 700; color: var(--secondary); letter-spacing: 1.5px; text-transform: uppercase; }
-.nav-links a.active { color: var(--secondary); border-bottom: 2px solid var(--secondary); }
+
         .nav-links { display: flex; gap: 30px; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 16px; transition: color 0.3s; }
         .nav-links a:hover { color: var(--secondary); }
+        .nav-links a.active { color: var(--secondary); border-bottom: 2px solid var(--secondary); }
         .nav-contact-btn { background: var(--secondary); color: white !important; padding: 10px 20px; border-radius: 4px; }
         .nav-contact-btn:hover { background: var(--accent); }
 
@@ -236,7 +237,8 @@
         .file-upload i { color: var(--primary); font-size: 20px; }
         
         .footer-bottom { padding: 25px 20px; text-align: center; color: #7a8b9c; font-size: 14px; }
- .nav-toggle { display: none; background: none; border: none; font-size: 24px; color: var(--primary); cursor: pointer; }
+        .nav-toggle { display: none; background: none; border: none; font-size: 24px; color: var(--primary); cursor: pointer; }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .hero h1 { font-size: 52px; }
@@ -262,7 +264,6 @@
             .trust-banner { padding: 40px 20px; }
             .trust-grid { gap: 30px; }
         }
-       
     </style>
 </head>
 <body>
@@ -276,48 +277,32 @@
         </a>
         <button class="nav-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
         <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html" >Home</a>
             <a href="services.html" >Services</a>
-            <a href="why-us.html" >Why Us</a>
+            <a href="why-us.html" class="active">Why Us</a>
             <a href="quote.html" class="nav-contact-btn" >Get a Quote</a>
         </div>
     </nav>
-    <header class="hero">
-        <!-- Background Visual: High-quality video loop of ship repair / piping fabrication -->
-        <video autoplay loop muted playsinline class="hero-video" poster="https://assets.mixkit.co/videos/47755/47755-thumb-360-3.jpg">
-            <source src="https://assets.mixkit.co/videos/47755/47755-360.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Industrial Mechanical Engineering & Ship Repair Specialists.</h1>
-            <p>Certified contractors delivering precision piping, scaffolding, and technical manpower for marine and onshore projects.</p>
-            <div class="hero-ctas">
-                <a href="quote.html" class="btn btn-primary"><i class="fas fa-file-invoice-dollar"></i> Request a Quote / Capability Statement</a>
-                <a href="services.html" class="btn btn-secondary"><i class="fas fa-tools"></i> View Our Services</a>
-            </div>
+    <section id="why-us" class="why-us section-padding">
+        <div class="section-header">
+            <h2>Why Choose WSOTS</h2>
+            <p>Delivering excellence, safety, and reliability on every project.</p>
         </div>
-    </header>
-
-    <section class="trust-banner">
-        <div class="trust-grid">
-            <div class="trust-item">
-                <i class="fas fa-shield-alt"></i>
-                <h3>ZERO</h3>
-                <p>LTI (Lost Time Injury) Record</p>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-user-shield"></i></div>
+                <h3>Safety First</h3>
+                <p>Strict adherence to international HSE standards and maritime regulations. We prioritize the wellbeing of our team and the integrity of your site.</p>
             </div>
-            <div class="trust-item">
-                <i class="fas fa-certificate"></i>
-                <h3>CERTIFIED</h3>
-                <p>ISO 9001 & AWS/ASME Welding</p>
-                <div class="cert-icons">
-                    <i class="fas fa-award" title="ISO 9001"></i>
-                    <i class="fas fa-anchor" title="Marine Class Approvals"></i>
-                </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-shipping-fast"></i></div>
+                <h3>Rapid Mobilization</h3>
+                <p>Unmatched ability to deploy certified teams and specialized equipment on short notice to minimize your operational downtime.</p>
             </div>
-            <div class="trust-item">
-                <i class="fas fa-hard-hat"></i>
-                <h3>150+</h3>
-                <p>Completed Projects</p>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Turnkey Solutions</h3>
+                <p>Seamlessly handling entire project lifecycles—from initial fabrication through pre-commissioning, execution, and staffing.</p>
             </div>
         </div>
     </section>
