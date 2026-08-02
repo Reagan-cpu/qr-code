@@ -3,135 +3,589 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Worldwide Sea Onshore Technical Service Pvt. Ltd.</title>
-    <meta name="description" content="Worldwide Sea Onshore Technical Service Pvt. Ltd. - Business Card">
+    <title>WSOTS - Worldwide Sea Onshore Technical Service Pvt. Ltd.</title>
+    <meta name="description" content="Industrial Mechanical Engineering & Ship Repair Specialists.">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-        *{margin:0;padding:0;box-sizing:border-box}
-        html,body{width:100%;height:100%;overflow-x:hidden}
-        body{display:flex;justify-content:center;align-items:center;min-height:100vh;background:#fff;font-family:'Roboto',sans-serif}
-        .card-container{width:100%;min-height:100vh;background:#fff;padding:50px 70px;display:flex;flex-direction:column;justify-content:space-between}
-        .top-section{display:flex;justify-content:space-between;align-items:flex-start}
-        .logo-section{display:flex;flex-direction:column;align-items:center}
-        .globe-logo{width:110px;height:90px;object-fit:contain;cursor:pointer;transition:transform .3s ease}
-        .globe-logo:hover{transform:scale(1.08)}
-        .logo-text{font-family:'Roboto',sans-serif;font-weight:900;font-size:18px;color:#1a3a5c;margin-top:6px;letter-spacing:3px}
-        .contact-section{text-align:right}
-        .person-name{font-family:'Merriweather',serif;font-size:36px;font-weight:900;color:#1a2a3a;margin-bottom:10px}
-        .phone-line{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-bottom:5px;font-size:22px;font-weight:700;color:#8b1a1a;cursor:pointer;transition:color .2s ease;text-decoration:none}
-        .phone-line:hover{color:#c0392b}
-        .phone-icon{width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center}
-        .phone-icon svg{width:18px;height:18px;fill:#8b1a1a;transition:fill .2s ease}
-        .phone-line:hover .phone-icon svg{fill:#c0392b}
-        .middle-section{text-align:center;padding:40px 0 30px;flex-grow:1;display:flex;flex-direction:column;justify-content:center}
-        .company-name-main{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;font-style:italic;color:#1a2a3a;letter-spacing:8px;text-transform:uppercase;margin-bottom:12px}
-        .company-name-sub{font-family:'Roboto',sans-serif;font-size:34px;font-weight:700;color:#8b1a1a;letter-spacing:5px;text-transform:uppercase}
-        .divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,#ccc,transparent);margin:10px 0 30px}
-        .bottom-section{display:flex;flex-direction:column;gap:24px}
-        .address-line{display:flex;align-items:flex-start;gap:12px;font-size:22px;font-weight:700;color:#1a2a3a;line-height:1.6;cursor:default;transition:transform .2s ease}
-        .address-line:hover{transform:translateX(5px)}
-        .address-line .pin-icon{flex-shrink:0;margin-top:3px}
-        .email-line{display:flex;align-items:center;gap:12px;font-size:26px;font-weight:900;color:#1a2a3a;flex-wrap:wrap}
-        .email-icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
-        .email-icon svg{width:26px;height:26px;fill:#1a2a3a}
-        .email-link{color:#1a2a3a;text-decoration:none;transition:color .2s ease;cursor:pointer}
-        .email-link:hover{color:#8b1a1a;text-decoration:underline}
-        .email-separator{color:#1a2a3a;font-weight:400;margin:0 5px}
-        @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-        .top-section{animation:fadeInUp .6s ease-out .1s both}
-        .middle-section{animation:fadeInUp .6s ease-out .2s both}
-        .bottom-section{animation:fadeInUp .6s ease-out .3s both}
 
-        @media(max-width:1024px){
-            .card-container{padding:40px 45px}
-            .company-name-main{font-size:42px;letter-spacing:5px}
-            .company-name-sub{font-size:28px;letter-spacing:3px}
-            .person-name{font-size:30px}
-            .phone-line{font-size:19px}
-            .address-line{font-size:19px}
-            .email-line{font-size:22px}
+        :root {
+            --primary: #1a3a5c;
+            --secondary: #8b1a1a;
+            --text-dark: #1a2a3a;
+            --text-light: #ffffff;
+            --bg-light: #f4f7f6;
+            --accent: #c0392b;
         }
-        @media(max-width:768px){
-            .card-container{padding:30px 28px}
-            .top-section{flex-direction:column;align-items:center;gap:25px}
-            .contact-section{text-align:center}
-            .phone-line{justify-content:center;font-size:17px}
-            .person-name{font-size:26px}
-            .globe-logo{width:90px;height:90px}
-            .company-name-main{font-size:28px;letter-spacing:3px}
-            .company-name-sub{font-size:22px;letter-spacing:2px}
-            .address-line{font-size:16px}
-            .email-line{font-size:18px;flex-direction:column;align-items:flex-start;gap:6px}
-            .email-separator{display:none}
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            color: var(--text-dark); 
+            line-height: 1.6; 
+            overflow-x: hidden;
         }
-        @media(max-width:480px){
-            .card-container{padding:22px 18px}
-            .globe-logo{width:75px;height:75px}
-            .logo-text{font-size:14px}
-            .person-name{font-size:22px}
-            .phone-line{font-size:15px}
-            .company-name-main{font-size:22px;letter-spacing:2px}
-            .company-name-sub{font-size:17px;letter-spacing:1px}
-            .address-line{font-size:14px}
-            .email-line{font-size:15px}
+
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+
+        /* ===== NAVBAR ===== */
+        nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 15px 50px; 
+            background: #ffffff; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
         }
-        @media(max-width:360px){
-            .card-container{padding:18px 14px}
-            .company-name-main{font-size:18px;letter-spacing:1px}
-            .company-name-sub{font-size:14px}
-            .person-name{font-size:20px}
-            .phone-line{font-size:13px}
-            .email-line{font-size:13px}
-            .address-line{font-size:13px}
+
+        .nav-brand { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            text-decoration: none;
         }
+
+        .nav-logo { 
+            width: 70px; 
+            height: auto; 
+            object-fit: contain; 
+        }
+
+        .nav-text { display: flex; flex-direction: column; }
+        .nav-text-main { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; color: var(--primary); font-style: italic; letter-spacing: 2px; }
+        .nav-text-sub { font-size: 12px; font-weight: 700; color: var(--secondary); letter-spacing: 1.5px; text-transform: uppercase; }
+
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 16px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--secondary); }
+        .nav-contact-btn { background: var(--secondary); color: white !important; padding: 10px 20px; border-radius: 4px; }
+        .nav-contact-btn:hover { background: var(--accent); }
+
+        /* ===== HERO SECTION ===== */
+        .hero { 
+            position: relative; 
+            min-height: 90vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            color: white; 
+            padding: 100px 20px;
+        }
+
+        .hero-video { 
+            position: absolute; 
+            top: 0; left: 0; 
+            width: 100%; height: 100%; 
+            object-fit: cover; 
+            z-index: -2; 
+        }
+
+        .hero-overlay { 
+            position: absolute; 
+            top: 0; left: 0; 
+            width: 100%; height: 100%; 
+            background: linear-gradient(rgba(26, 58, 92, 0.85), rgba(26, 58, 92, 0.65)); 
+            z-index: -1; 
+        }
+
+        .hero-content { max-width: 1000px; z-index: 1; animation: fadeInUp 1s ease-out; }
+        .hero h1 { font-size: 64px; font-weight: 900; margin-bottom: 25px; line-height: 1.2; letter-spacing: 2px; }
+        .hero p { font-size: 24px; font-weight: 400; margin-bottom: 45px; max-width: 800px; margin-inline: auto; opacity: 0.9; }
+
+        .hero-ctas { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 18px 35px; font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; border: none; }
+        .btn-primary { background: var(--secondary); color: white; }
+        .btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(139, 26, 26, 0.3); }
+        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+        .btn-secondary:hover { background: white; color: var(--primary); transform: translateY(-2px); }
+
+        /* ===== TRUST & COMPLIANCE BANNER ===== */
+        .trust-banner { 
+            background: var(--primary); 
+            color: white; 
+            padding: 50px 20px; 
+            position: relative;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .trust-item i { font-size: 40px; color: var(--secondary); margin-bottom: 15px; }
+        .trust-item h3 { font-size: 42px; font-family: 'Roboto', sans-serif; font-weight: 900; margin-bottom: 5px; }
+        .trust-item p { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #a9c2d9; }
+        .cert-icons { display: flex; justify-content: center; gap: 15px; margin-top: 10px; font-size: 24px; color: var(--secondary); }
+
+        /* ===== CORE SERVICES ===== */
+        .section-padding { padding: 100px 20px; }
+        .section-header { text-align: center; margin-bottom: 60px; max-width: 800px; margin-inline: auto; }
+        .section-header h2 { font-size: 48px; color: var(--primary); margin-bottom: 15px; }
+        .section-header p { font-size: 18px; color: #555; }
+        
+        .bg-light { background: var(--bg-light); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .service-card:hover { 
+            transform: translateY(-10px); 
+            border-bottom-color: var(--secondary); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
+        }
+
+        .service-icon {
+            width: 70px; height: 70px;
+            background: rgba(26, 58, 92, 0.05);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon { background: var(--primary); color: white; }
+
+        .service-card h3 { font-size: 24px; color: var(--primary); margin-bottom: 15px; font-family: 'Roboto', sans-serif; font-weight: 900; }
+        .service-card p { font-size: 16px; color: #666; line-height: 1.7; }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-us { background: #ffffff; }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .why-card { text-align: center; }
+        .why-icon {
+            width: 100px; height: 100px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 40px;
+            color: var(--secondary);
+            margin: 0 auto 25px;
+            position: relative;
+        }
+        .why-icon::after {
+            content: ''; position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 2px dashed rgba(139, 26, 26, 0.3); border-radius: 50%;
+            animation: rotate 15s linear infinite;
+        }
+        .why-card h3 { font-size: 26px; color: var(--primary); margin-bottom: 15px; }
+        .why-card p { font-size: 16px; color: #555; }
+
+        @keyframes rotate { 100% { transform: rotate(360deg); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ===== FOOTER / CONTACT ===== */
+        .footer { background: #112233; color: white; position: relative; }
+        .footer-top { padding: 80px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .footer-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto; }
+        
+        .contact-info { padding-right: 40px; }
+        .contact-info h2 { font-size: 42px; margin-bottom: 20px; color: white; }
+        .contact-info > p { font-size: 18px; color: #a9c2d9; margin-bottom: 40px; }
+        
+        .contact-details { display: flex; flex-direction: column; gap: 25px; }
+        .contact-item { display: flex; gap: 20px; align-items: flex-start; }
+        .contact-item i { font-size: 24px; color: var(--secondary); margin-top: 5px; }
+        .contact-item-content h4 { font-size: 18px; margin-bottom: 5px; color: white; }
+        .contact-item-content a, .contact-item-content p { color: #a9c2d9; text-decoration: none; font-size: 16px; transition: color 0.3s; line-height: 1.5; }
+        .contact-item-content a:hover { color: var(--secondary); }
+
+        .lead-form-container { background: white; padding: 40px; border-radius: 8px; color: var(--text-dark); box-shadow: 0 10px 30px rgba(0,0,0,0.5); transform: translateY(-20px); }
+        .lead-form-container h3 { font-size: 28px; margin-bottom: 25px; color: var(--primary); }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 700; font-size: 14px; }
+        .form-control { width: 100%; padding: 14px 15px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Roboto', sans-serif; font-size: 16px; background: #f9f9f9; transition: border-color 0.3s; }
+        .form-control:focus { outline: none; border-color: var(--primary); background: white; }
+        textarea.form-control { resize: vertical; min-height: 100px; }
+        
+        .file-upload { display: flex; align-items: center; gap: 10px; border: 1px dashed #bbb; padding: 15px; border-radius: 4px; background: #f9f9f9; cursor: pointer; }
+        .file-upload input[type="file"] { display: none; }
+        .file-upload i { color: var(--primary); font-size: 20px; }
+        
+        .footer-bottom { padding: 25px 20px; text-align: center; color: #7a8b9c; font-size: 14px; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 52px; }
+            .hero p { font-size: 20px; }
+            .footer-container { grid-template-columns: 1fr; gap: 40px; }
+            .contact-info { padding-right: 0; }
+            .lead-form-container { transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .nav-toggle { display: block; }
+.nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+.nav-links.active { display: flex; }
+            .nav-text-main { font-size: 18px; }
+            .nav-text-sub { font-size: 10px; }
+            .hero { padding: 80px 20px; }
+            .hero h1 { font-size: 38px; }
+            .hero p { font-size: 18px; }
+            .hero-ctas { flex-direction: column; width: 100%; }
+            .hero-ctas .btn { width: 100%; justify-content: center; }
+            .section-header h2 { font-size: 36px; }
+            .trust-banner { padding: 40px 20px; }
+            .trust-grid { gap: 30px; }
+        }
+        .nav-toggle { display: none; background: none; border: none; font-size: 24px; color: var(--primary); cursor: pointer; }
     </style>
 </head>
 <body>
-    <div class="card-container" id="business-card">
-        <div class="top-section">
-            <div class="logo-section">
-                <img class="globe-logo" src="Screenshot 2026-08-01 183008.png" alt="WSOTS Globe Logo">
-                <div class="logo-text">WSOTS</div>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#" class="nav-brand">
+            <img src="Screenshot 2026-08-01 183008.png" alt="WSOTS Logo" class="nav-logo">
+            <div class="nav-text">
+                <span class="nav-text-main">WSOTS</span>
+                <span class="nav-text-sub">Worldwide Sea Onshore</span>
             </div>
-            <div class="contact-section">
-                <div class="person-name">Rajiv Ranjan</div>
-                <a href="tel:+918169749708" class="phone-line" id="phone-1">
-                    <span class="phone-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
-                    +91 81697 49708
-                </a>
-                <a href="tel:+919004458017" class="phone-line" id="phone-2">
-                    <span class="phone-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
-                    +91 90044 58017
-                </a>
-                <a href="tel:+919167736961" class="phone-line" id="phone-3">
-                    <span class="phone-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
-                    +91 91677 36961
-                </a>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#contact" class="nav-contact-btn">Get a Quote</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (The Hook) -->
+    <header class="hero">
+        <!-- Background Visual: High-quality video loop of ship repair / piping fabrication -->
+        <video autoplay loop muted playsinline class="hero-video" poster="https://assets.mixkit.co/videos/47755/47755-thumb-360-3.jpg">
+            <source src="https://assets.mixkit.co/videos/47755/47755-360.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Industrial Mechanical Engineering & Ship Repair Specialists.</h1>
+            <p>Certified contractors delivering precision piping, scaffolding, and technical manpower for marine and onshore projects.</p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn btn-primary"><i class="fas fa-file-invoice-dollar"></i> Request a Quote / Capability Statement</a>
+                <a href="#services" class="btn btn-secondary"><i class="fas fa-tools"></i> View Our Services</a>
             </div>
         </div>
-        <div class="middle-section">
-            <div class="company-name-main">Worldwide Sea Onshore</div>
-            <div class="company-name-sub">Technical Service Pvt. Ltd.</div>
-        </div>
-        <div class="divider"></div>
-        <div class="bottom-section">
-            <div class="address-line" id="address">
-                <span class="pin-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#c0392b"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span>
-                <span>Office No. A5, Moreshwar Apartment, Plot No. A-35, Near Nerul Railway Station, Sector - 20, Nerul (W), Navi Mumbai, Maharashtra - 400706.</span>
+    </header>
+
+    <!-- TRUST & COMPLIANCE BANNER -->
+    <section class="trust-banner">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>ZERO</h3>
+                <p>LTI (Lost Time Injury) Record</p>
             </div>
-            <div class="email-line" id="email-section">
-                <span class="email-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
-                <a href="mailto:rajivranjan121284@gmail.com" class="email-link" id="email-1">rajivranjan121284@gmail.com</a>
-                <span class="email-separator">|</span>
-                <a href="mailto:wsots2021@gmail.com" class="email-link" id="email-2">wsots2021@gmail.com</a>
+            <div class="trust-item">
+                <i class="fas fa-certificate"></i>
+                <h3>CERTIFIED</h3>
+                <p>ISO 9001 & AWS/ASME Welding</p>
+                <div class="cert-icons">
+                    <i class="fas fa-award" title="ISO 9001"></i>
+                    <i class="fas fa-anchor" title="Marine Class Approvals"></i>
+                </div>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-hard-hat"></i>
+                <h3>150+</h3>
+                <p>Completed Projects</p>
             </div>
         </div>
-    </div>
-    <script>
-        document.querySelectorAll('.phone-line').forEach(p=>{p.addEventListener('click',function(e){e.preventDefault();navigator.clipboard.writeText(this.textContent.trim()).then(()=>showTooltip(this,'Copied!')).catch(()=>{window.location.href=this.href})})});
-        document.querySelectorAll('.email-link').forEach(e=>{e.addEventListener('click',function(ev){ev.preventDefault();navigator.clipboard.writeText(this.textContent.trim()).then(()=>showTooltip(this,'Copied!')).catch(()=>{window.location.href=this.href})})});
-        document.getElementById('address').addEventListener('click',function(){navigator.clipboard.writeText(this.querySelector('span:last-child').textContent.trim()).then(()=>showTooltip(this,'Address copied!'))});
-        function showTooltip(el,msg){const t=document.createElement('div');t.textContent=msg;t.style.cssText='position:fixed;background:#1a2a3a;color:#fff;padding:8px 16px;border-radius:6px;font-size:14px;font-weight:500;z-index:1000;pointer-events:none;animation:tooltipFade 1.5s ease-out forwards;box-shadow:0 4px 12px rgba(0,0,0,.2)';const r=el.getBoundingClientRect();t.style.left=r.left+r.width/2-40+'px';t.style.top=r.top-40+'px';document.body.appendChild(t);if(!document.getElementById('ts')){const s=document.createElement('style');s.id='ts';s.textContent='@keyframes tooltipFade{0%{opacity:0;transform:translateY(10px)}20%{opacity:1;transform:translateY(0)}80%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-10px)}}';document.head.appendChild(s)}setTimeout(()=>t.remove(),1500)}
-    </script>
+    </section>
+
+    <!-- CORE SERVICES GRID -->
+    <section id="services" class="services section-padding bg-light">
+        <div class="section-header">
+            <h2>Core Services</h2>
+            <p>Comprehensive engineering and technical solutions tailored for the maritime and industrial sectors.</p>
+        </div>
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-ship"></i></div>
+                <h3>Ship Repairing</h3>
+                <p>Complete hull maintenance, structural steel renewal, and dry-dock mechanical overhauls to ensure seaworthiness and compliance.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-water"></i></div>
+                <h3>Piping Construction</h3>
+                <p>Expert high-pressure pipeline fabrication, precise spool welding, and robust industrial system installation.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+                <h3>Pre-commissioning Assistance</h3>
+                <p>Thorough system flushing, pressure testing, leak detection, and operational readiness validation for safe startups.</p>
+            </div>
+            <!-- Service 4 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cubes"></i></div>
+                <h3>Scaffolding Platform Construction</h3>
+                <p>Certified, safe, and custom-engineered access solutions designed for complex and challenging industrial heights.</p>
+            </div>
+            <!-- Service 5 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-users-cog"></i></div>
+                <h3>Technical Manpower Supply</h3>
+                <p>Providing skilled engineers, certified welders, experienced pipefitters, and rigorous safety officers on demand.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-us" class="why-us section-padding">
+        <div class="section-header">
+            <h2>Why Choose WSOTS</h2>
+            <p>Delivering excellence, safety, and reliability on every project.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-user-shield"></i></div>
+                <h3>Safety First</h3>
+                <p>Strict adherence to international HSE standards and maritime regulations. We prioritize the wellbeing of our team and the integrity of your site.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-shipping-fast"></i></div>
+                <h3>Rapid Mobilization</h3>
+                <p>Unmatched ability to deploy certified teams and specialized equipment on short notice to minimize your operational downtime.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Turnkey Solutions</h3>
+                <p>Seamlessly handling entire project lifecycles—from initial fabrication through pre-commissioning, execution, and staffing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & INTERACTIVE LEAD CAPTURE -->
+    <footer id="contact" class="footer">
+        <div class="footer-top">
+            <div class="footer-container">
+                
+                <!-- Direct Contact Info -->
+                <div class="contact-info">
+                    <h2>Ready to start your project?</h2>
+                    <p>Contact our experts today for a comprehensive consultation and quote.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="contact-item-content">
+                                <h4>24/7 Emergency Service</h4>
+                                <a href="tel:+918169749708">+91 81697 49708</a><br>
+                                <a href="tel:+919004458017">+91 90044 58017</a><br>
+                                <a href="tel:+919167736961">+91 91677 36961</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-item-content">
+                                <h4>Email Us</h4>
+                                <a href="mailto:rajivranjan121284@gmail.com">rajivranjan121284@gmail.com</a><br>
+                                <a href="mailto:wsots2021@gmail.com">wsots2021@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-item-content">
+                                <h4>Head Office</h4>
+                                <p>Office No. A5, Moreshwar Apartment,<br>Plot No. A-35, Near Nerul Railway Station,<br>Sector - 20, Nerul (W), Navi Mumbai,<br>Maharashtra - 400706.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Simple Lead Capture Form -->
+<div class="lead-form-container">
+    <h3>Request a Quote</h3>
+
+    <form action="https://formsubmit.co/wsots2021@gmail.com"
+          method="POST"
+          enctype="multipart/form-data"
+          id="quote-form">
+
+        <!-- FormSubmit Configuration -->
+        <input type="hidden" name="_subject" value="New Quote Request - WSOTS Website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Full Name -->
+        <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input
+                type="text"
+                id="full-name"
+                name="full_name"
+                class="form-control"
+                placeholder="Enter your full name"
+                required>
+        </div>
+
+        <!-- Company Name -->
+        <div class="form-group">
+            <label for="company-name">Company Name</label>
+            <input
+                type="text"
+                id="company-name"
+                name="company_name"
+                class="form-control"
+                placeholder="Enter your company name"
+                required>
+        </div>
+
+        <!-- Business Email -->
+        <div class="form-group">
+            <label for="business-email">Business Email</label>
+            <input
+                type="email"
+                id="business-email"
+                name="email"
+                class="form-control"
+                placeholder="name@company.com"
+                required>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <input
+                type="tel"
+                id="phone-number"
+                name="phone"
+                class="form-control"
+                placeholder="+91 9876543210"
+                required>
+        </div>
+
+        <!-- Project Type -->
+        <div class="form-group">
+            <label for="project-type">Project Type</label>
+            <select
+                id="project-type"
+                name="project_type"
+                class="form-control"
+                required>
+
+                <option value="" disabled selected>Select a service...</option>
+                <option value="Ship Repairing">Ship Repairing</option>
+                <option value="Piping Construction">Piping Construction</option>
+                <option value="Pre-commissioning">Pre-commissioning</option>
+                <option value="Scaffolding">Scaffolding</option>
+                <option value="Manpower Supply">Manpower Supply</option>
+                <option value="Other / Turnkey">Other / Turnkey</option>
+            </select>
+        </div>
+
+        <!-- Project Location -->
+        <div class="form-group">
+            <label for="location">Project Location</label>
+            <input
+                type="text"
+                id="location"
+                name="project_location"
+                class="form-control"
+                placeholder="City, Port, or Facility Name"
+                required>
+        </div>
+
+        <!-- Estimated Timeline -->
+        <div class="form-group">
+            <label for="timeline">Estimated Timeline</label>
+            <input
+                type="text"
+                id="timeline"
+                name="estimated_timeline"
+                class="form-control"
+                placeholder="e.g. Immediate, Next Month"
+                required>
+        </div>
+
+        <!-- RFQ Upload -->
+        <div class="form-group">
+            <label for="attachment">Upload RFQ Document (Optional)</label>
+
+            <label class="file-upload">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <span>Click to attach PDF or DOCX</span>
+
+                <input
+                    type="file"
+                    id="attachment"
+                    name="attachment"
+                    accept=".pdf,.doc,.docx">
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">
+            Submit Request
+        </button>
+
+    </form>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const fileInput = document.getElementById("attachment");
+    const fileText = document.querySelector(".file-upload span");
+
+    if (fileInput && fileText) {
+
+        fileInput.addEventListener("change", function () {
+
+            if (this.files.length > 0) {
+                fileText.textContent = this.files[0].name;
+                fileText.style.color = "#1a3a5c";
+                fileText.style.fontWeight = "bold";
+            } else {
+                fileText.textContent = "Click to attach PDF or DOCX";
+                fileText.style.color = "";
+                fileText.style.fontWeight = "";
+            }
+
+        });
+
+    }
+
+});
+document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
+</script>
+
 </body>
 </html>
